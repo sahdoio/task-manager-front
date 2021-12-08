@@ -1,0 +1,25 @@
+.DS_Store
+node_modules/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+test/unit/coverage
+
+package-lock.json
+
+.env
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# _v1
+_v1/node_modules/
+_v1/vendor/
+_v1/bootstrap/cache/
+_v1/bootstrap/cache/.env*
+_v1/bootstrap/cache/package-lock.json

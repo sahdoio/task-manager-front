@@ -1,0 +1,16 @@
+# develop stage
+FROM node:12.16-alpine as develop-stage
+
+ENV CONTAINER_PATH /var/www/docker-vue
+
+WORKDIR $CONTAINER_PATH
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8093
+
+CMD ["npm", "run", "serve"]

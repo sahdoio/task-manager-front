@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    container_name: task-manager-frontend
+    image: task-manager-frontend
+    build:
+      context: .
+      dockerfile: ./docker/dev.docker
+    volumes:
+      - .:/var/www/docker-vue
+      - /var/www/docker-vue/node_modules
+    environment:
+      - npm_config_unsafe_perm=true
+      # https://github.com/paulmillr/chokidar
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "8080:8080"

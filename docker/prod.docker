@@ -1,0 +1,8 @@
+# develop stage
+FROM node:12.16-alpine as build-stage
+
+ENV CONTAINER_PATH /var/www/docker-vue
+
+WORKDIR $CONTAINER_PATH
+
+CMD [ "node", "server.js" ]
